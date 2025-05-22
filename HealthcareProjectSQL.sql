@@ -1,6 +1,9 @@
+```sql
 create database Medical_Data_History;
 set sql_safe_updates = 0;
 use Medical_data_history;
+
+```
 
 select * from admissions;
 select * from doctors;
@@ -13,7 +16,19 @@ describe doctors;
 describe patients;
 describe provincename;
 
+-- Creating simple stored procedure to call multiple tables at ones.
 
+Delimiter $$
+create procedure show_multiple_tables()
+begin
+	select * from admissions;
+	select * from doctors;
+	select * from patients;
+	select * from provincename;
+end $$
+Delimiter ;
+
+call show_multiple_tables;
 
 -- 1) Show first name, last name, and gender of patients who's gender is 'M'
 
@@ -96,18 +111,6 @@ use Medical_data_history;
 
 select distinct year(birth_date)  from patients order by birth_date asc;
 
-
--- Creating simple stored procedure to call multiple tables at ones.
-
-Delimiter $$
-create procedure show_multiple_tables()
-begin
-	select * from admissions;
-	select * from doctors;
-	select * from patients;
-	select * from provincename;
-end $$
-Delimiter ;
 
 call show_multiple_tables;
 

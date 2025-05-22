@@ -1,9 +1,8 @@
-```sql
+
 create database Medical_Data_History;
 set sql_safe_updates = 0;
 use Medical_data_history;
 
-```
 
 select * from admissions;
 select * from doctors;

@@ -44,6 +44,7 @@ ________________________________________________________________________________
 
 ### Key Findings from Medical Data History Analysis:
 
+```
 1) Gender Distribution
 
 The total number of male and female patients was identified, which helps in understanding the gender ratio in the patient database.
@@ -103,4 +104,4 @@ Patient names were formatted in multiple ways (e.g., SMITH,john) to show data pr
 Provinces where the total height of patients exceeded 7000 cm were identified, which may be a proxy for demographic clustering or physical health indicators.
 
 
-
+```

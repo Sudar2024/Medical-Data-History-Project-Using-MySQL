@@ -15,30 +15,32 @@ admissions – Tracks patient admissions including admission and discharge dates
 
 provincename – Maps province IDs to full province names.
 
+__________________________________________________________________________________________________________________________________________________________________________________________
+
 ```
-### Key SQL Concepts Used ###
 
-- SELECT with WHERE, LIKE, IN, BETWEEN
+Key SQL Concepts Used: 
 
-- Aggregate Functions (COUNT, MAX, MIN, SUM)
+  - SELECT with WHERE, LIKE, IN, BETWEEN
 
-- GROUP BY and HAVING Clauses
+  - Aggregate Functions (COUNT, MAX, MIN, SUM)
 
-- JOINS (INNER, LEFT JOIN)
+  - GROUP BY and HAVING Clauses
 
-- Window Functions (COUNT(*) OVER)
+  - JOINS (INNER, LEFT JOIN)
 
-- String Functions (CONCAT, UPPER, LOWER, CHAR_LENGTH)
+  - Window Functions (COUNT(*) OVER)
 
-- Date Functions (YEAR, DAY)
+  - String Functions (CONCAT, UPPER, LOWER, CHAR_LENGTH)
 
-- Subqueries
+  - Date Functions (YEAR, DAY)
 
-- CASE Statements
+  - Subqueries
 
-- Stored Procedures
+  - CASE Statements
 
-- Window Function
+  - Stored Procedures
+
 
 ```
 

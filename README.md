@@ -1,27 +1,42 @@
 # Medical-Data-History-Project-Using-MySQL
 
-```sql
-SELECT 
-  p.patient_id,
-  CONCAT(
-    p.patient_id,
-    LENGTH(p.last_name),
-    YEAR(p.birth_date)
-  ) AS temp_password
-FROM patients p
-WHERE p.patient_id IN (SELECT DISTINCT patient_id FROM admissions);
-```
+## Project Overview
+This project demonstrates SQL proficiency through 35 real-world queries based on a simulated Medical Data History database. It includes operations across four tables — patients, doctors, admissions, and provincename. The goal of this project is to extract meaningful insights from healthcare data using various SQL techniques such as filtering, aggregation, joins, subqueries, and stored procedures.
+__________________________________________________________________________________________________________________________________________________________________________________________
+**Database Schema**
 
-_______________________________________________________________________________________________________________________________________________________________________________
+The project uses the following main tables:
+
+patients – Contains details such as patient ID, names, birth date, height, weight, gender, allergies, province, and city.
+
+doctors – Stores information about doctor ID, name, and medical specialty.
+
+admissions – Tracks patient admissions including admission and discharge dates, attending doctors, and diagnoses.
+
+provincename – Maps province IDs to full province names.
+
+### Key SQL Concepts Used ###
+
+- SELECT with WHERE, LIKE, IN, BETWEEN
+
+- Aggregate Functions (COUNT, MAX, MIN, SUM)
+
+- GROUP BY and HAVING Clauses
+
+- JOINS (INNER, LEFT JOIN)
+
+- Window Functions (COUNT(*) OVER)
+
+- String Functions (CONCAT, UPPER, LOWER, CHAR_LENGTH)
+
+- Date Functions (YEAR, DAY)
+
+- Subqueries
+
+- CASE Statements
+
+- Stored Procedures
+
+- Window Function
 
 
-```
-
-###35. All patients who have gone through admissions, can see their medical documents on our site.###
-Those patients are given a temporary password after their first admission. Show the patient_id and temp_password.
-The password must be the following, in order:
-- patient_id
-- the numerical length of patient's last_name
-- year of patient's birth_date
-
-```

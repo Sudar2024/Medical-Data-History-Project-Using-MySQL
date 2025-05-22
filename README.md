@@ -15,6 +15,7 @@ admissions – Tracks patient admissions including admission and discharge dates
 
 provincename – Maps province IDs to full province names.
 
+```
 ### Key SQL Concepts Used ###
 
 - SELECT with WHERE, LIKE, IN, BETWEEN
@@ -38,5 +39,7 @@ provincename – Maps province IDs to full province names.
 - Stored Procedures
 
 - Window Function
+
+```
 
 

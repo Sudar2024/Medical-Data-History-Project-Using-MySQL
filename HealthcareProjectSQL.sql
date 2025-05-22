@@ -257,4 +257,27 @@ end as isObese
 from patients
 where weight is not null and height is not null;
 
+/* 34) 34. Show patient_id, first_name, last_name, and attending doctor's specialty. 
+Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'. 
+Check patients, admissions, and doctors tables for required information. */
+call show_multiple_tables;
+select pat.patient_id, pat.first_name, pat.last_name, doc.specialty,ad.diagnosis
+from patients pat 
+	join admissions ad on ad.patient_id = pat.patient_id
+	join doctors doc on ad.attending_doctor_id = doc.doctor_id
+where ad.diagnosis = 'Epilepsy' and doc.first_name = 'Lisa';
+
+/* 35. All patients who have gone through admissions, can see their medical documents on our site. 
+Those patients are given a temporary password after their first admission. Show the patient_id and temp_password.
+The password must be the following, in order:
+- patient_id
+- the numerical length of patient's last_name
+- year of patient's birth_date */
+
+select 
+  p.patient_id,
+  concat (p.patient_id,LENGTH(p.last_name),year(p.birth_date)) as temp_password
+from patients p
+where p.patient_id in (select distinct patient_id from admissions);
+
 
